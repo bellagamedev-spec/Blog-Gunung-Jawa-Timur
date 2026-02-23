@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Gunung Jawa Timur</title>
+  <style>
+    /* Styling dasar */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+    }
+    header {
+      text-align: center;
+      background-color: #096309;
+      color: #ffffff;
+      padding: 1rem;
+    }
+    header img {
+      max-width: 30%;
+      height: 30;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #096309;
+    }
+    nav a {
+      color: #ffffff;
+      padding: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    nav a:hover {
+      background-color: #24b200;
+    }
+    .content {
+      padding: 2rem;
+    }
+    .section {
+      display: none;
+    }
+    .show {
+      display: block;
+    }
+    .mountain-img {
+      width: 30%;
+      max-width: 600px;
+      margin-bottom: 1rem;
+    }
+    .id-card {
+      display: inline-block;
+      width: 200px;
+      border: 1px solid #ffffff;
+      padding: 1rem;
+      margin: 1rem;
+      background-color: #ffffff;
+      text-align: center;
+    }
+    .id-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 30%;
+      margin-bottom: 1rem;
+    }
+  </style>
+  <script>
+    function showSection(sectionId, event) {
+      event.preventDefault();
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('show');
+      });
+      document.getElementById(sectionId).classList.add('show');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Header dengan gambar gunung -->
+  <header>
+    <h1>Gunung di Jawa Timur</h1>
+    <img src="./Cover.jpeg" alt="Gunung Tertinggi Jawa Timur">
+  </header>
+
+  <!-- Navigasi -->
+  <nav>
+    <a onclick="showSection('home', event)">Beranda</a>
+    <a onclick="showSection('tickets', event)">Harga Tiket</a>
+    <a onclick="showSection('contact', event)">Contact Us</a>
+    <a onclick="showSection('login', event)">Login/Registrasi</a>
+  </nav>
+
+  <!-- Konten Halaman -->
+  <div class="content">
+
+    <!-- Section Beranda -->
+    <div id="home" class="section show">
+      <h2></h2>
+      <p></p>
+      
+      <!-- Daftar Gunung dengan Deskripsi Panjang -->
+      <div>
+        <h3 style="background-color: green; font-family: Geneva, sans-serif">Gunung Semeru</h3>
+        <img src="./gunung semeru.jpg" alt="Gunung Semeru" class="mountain-img">
+        <p>Alamat: Malang & Lumajang, Jawa Timur</p>
+        <p>Gunung Semeru, atau Mahameru, adalah gunung tertinggi di Pulau Jawa dengan ketinggian mencapai 3.676 meter. Pemandangan di puncaknya sangat luar biasa, terutama saat matahari terbit. Para pendaki sering berkemah di Danau Ranu Kumbolo untuk menikmati keindahan alam sebelum melanjutkan perjalanan ke puncak.</p>
+      </div>
+      <div>
+        <h3 style="background-color: green; font-family: Geneva, sans-serif">Gunung Lawu</h3>
+        <img src="./gununglawu.webp" alt="Gunung Lawu" class="mountain-img">
+        <p>Alamat: Karanganyar & Magetan, Jawa Timur</p>
+        <p>Gunung Lawu terkenal dengan atmosfer mistisnya. Banyak pendaki yang tertarik oleh legenda serta situs-situs spiritual yang ada di jalur pendakiannya. Gunung ini menawarkan panorama alam yang memukau serta menjadi salah satu destinasi pendakian yang cukup populer di Jawa Timur.</p>
+      </div>
+      <div>
+        <h3 style="background-color: green; font-family: Geneva, sans-serif">Gunung Arjuno</h3>
+        <img src="./gunungarjuno.jpeg" alt="Gunung Arjuno" class="mountain-img">
+        <p>Alamat: Perbatasan Kota Batu, Kabupaten Malang dan Kabupaten Pasuruan</p>
+        <p>Gunung ARjuno sebuah gunung berapi kerucut di Jawa Timur, Indonesia dengan ketinggian 3339 mdpl.</p>
+    </div>
+    <div>
+        <h3 style="background-color: green; font-family: Geneva, sans-serif">Gunung Welirang</h3>
+        <img src="./welirang2.jpeg" alt="Gunung Welirang" class="mountain-img">
+        <p>Alamat: Perbatasan kota Batu, Kabupaten Pasuruan dan Kabupaten Mojokerto, Jawa Timur, Indonesia.</p>
+        <p>Gunung Welirang gunung berapi aktif dengan ketinggian 3156 mdpl.</p>
+    </div>
+    <div>
+        <h3 style="background-color: green; font-family: Geneva, sans-serif">Gunung Buthak</h3>
+        <img src="./gunung buthak.jpg" alt="Gunung Buthak" class="mountain-img">
+        <p>Alamat: Perbatasan Kabupaten Malang dan Kabupaten Blitar, Jawa Timur, Indonesia</p>
+        <p>Gunung Buthak adalah Gunung stratovolcano dengan ketinggian 2868 mdpl.</p>
+    </div>
+    <div>
+        <h3 style="background-color: green; font-family: Geneva, sans-serif">Gunung Kawi</h3>
+        <img src="./kawi2.jpeg" alt="Gunung Kawi" class="mountain-img">
+        <p>Alamat: Kecamatan Wonosari, Kabupaten Malang dan Kabupaten Blitar, Jawa Timur.</p>
+        <p>Gunung Kawi memiliki ketinggian 2603 mdpl.Gunung Kawi memiliki citra mistis dan pesugihan yang kental di Jawa Timur.</p>
+    </div>
+    <div>
+        <h3 style="background-color: green; font-family: Geneva, sans-serif">Gunung Bromo</h3>
+        <img src="./BROMO.jpg" alt="Gunung Bromo" class="mountain-img">
+        <p>Alamat: Kabupaten Probolinggo, Pasuruan, Malang dan Lumajang.</p>
+        <p>Gunung Bromo memiliki ketinggian sekitar 2392 mdpl. Memiliki kawah yang menjadi objek utama yang sering dikunjungi oleh wisatawan asing ataupun lokal.</p>
+    </div>
+    <div>
+        <h3 style="background-color: green; font-family: Geneva, sans-serif">Gunung Ijen</h3>
+        <img src="./ijen.jpg" alt="Gunung Ijen" class="mountain-img">
+        <p>Alamat: Perbatasan Kabupaten Bayuwangi dan Bondowoso, Jawa Timur</p>
+        <p>Gunung Ijen memiliki ketinggian sekitar 2386 mdpl. Gunung Ijen merupakan salah satu gunung dari delapan gunung api yang memiliki danau kawah dengan air danau yang bersifat asam.</p>
+    </div>
+    <div>
+        <h3 style="background-color: green; font-family: Geneva, sans-serif">Gunung Raung</h3>
+        <img src="./gunung-raung.jpg" alt="Gunung Raung" class="mountain-img">
+        <p>Alamat: Banyuwangi, Bondowoso, dan Jember, Jawa Timur.</p>
+        <p>Gunung Raung adalah gunung berapi kerucut yang memiliki kaldera kering dengan ketinggian 3344 mdpl. </p>
+    </div>
+    <div>
+        <h3 style="background-color: green; font-family: Geneva, sans-serif">Gunung Argopuro</h3>
+        <img src="./argopuro.jpg" alt="Gunung Argopuro" class="mountain-img">
+        <p>Alamat: Kabupaten Probolinggo, Situbondo dan Bondowoso, Jawa Timur.</p>
+        <p>Gunung Argopuro memiliki jalur pendakian terpanjang di pulau Jawa yaitu sekitar 40 km, dengan ketinggian 3088 mdpl.</p>
+    </div>
+  
+      <!-- Tambahkan entri gunung lainnya dengan deskripsi serupa -->
+    </div>
+
+    <!-- Section Tiket Pendakian -->
+    <div id="tickets" class="section">
+      <h2></h2>
+      <p></p>
+      
+      <div>
+        <h3 style="background-color: green; font-family: Geneva, sans-serif">Gunung Semeru</h3>
+        <p>Harga tiket: Rp 20,000</p>
+        <p>Aturan: Menjaga kebersihan dan keselamatan. Wajib membawa perlengkapan pendakian yang memadai.</p>
+        <p>Larangan: Dilarang merusak flora dan fauna serta membuang sampah sembarangan.</p>
+      </div>
+      <div>
+        <h3 style="background-color: green; font-family: Geneva, sans-serif">Gunung Lawu</h3>
+        <p>Harga tiket: Rp 15,000</p>
+        <p>Aturan: Mengikuti jalur pendakian resmi dan menjaga kesopanan.</p>
+        <p>Larangan: Tidak diperkenankan membakar api unggun di tempat yang tidak disediakan.</p>
+      </div>
+      <div>
+        <h2 style="background-color: green; font-family: Geneva, sans-serif">Gunung Arjuno</h2>
+        <p>Harga tiket: Rp. 25,000</p>
+        <p>Aturan: Pendaki harus berusia minimal 16 tahun, dan wajib mendaftar secara online melalui website resmi.</p>
+        <p>Larangan:  Tidak boleh tektok, tidak boleh ganjil, tidak boleh membuang sampah sembarangan</p>
+    </div>
+    <div>
+      <h2 style="background-color: green; font-family: Geneva, sans-serif">Gunung Welirang</h2>
+      <p>Harga tiket: Rp. 25,000</p>
+      <p>Aturan:  Pendaki harus berusia minimal 16 tahun, dan wajib mendaftar secara online melalui website resmi.</p>
+      <p>Larangan: Tidak boleh ganjil, tidak boleh membuang sampah sembarangan</p>
+  </div>
+  <div>
+    <h2 style="background-color: green; font-family: Geneva, sans-serif">Gunung Buthak</h2>
+    <p>Harga tiket: Rp. 20,000</p>
+    <p>Aturan: Harus Registrasi online melalui aplikasi Tiket Pendakian, pendaki wajib membawa perlengkapan standart pendakian</p>
+    <p>LaranganL: Dilarang membuat jalur sendiri, dilarang membawa tisu basah, dilarang berbuat asusila.</p>
+</div>
+<div>
+  <h2 style="background-color: green; font-family: Geneva, sans-serif">Gunung Kawi</h2>
+  <p>Harga tiket: Rp. 20,000</p>
+  <p>Aturan: Tidak mengambil foto dan video tanpa izin pengelola, melihat ramalan cuaca.</p>
+  <p>Larangan: Waspada tanda alam, tidak mendaki dalam rombongan ganjil, tidak boleh mengeluh saat mendaki.</p>
+</div>
+<div>
+  <h2 style="background-color: green; font-family: Geneva, sans-serif">Gunung Bromo</h2>
+  <p>Harga tiket: Rp. 30,000</p>
+  <p>Aturan: Pembayaran tiket hanya bisa melalui virtual account, ibu hamil tidak boleh masuk ke kawasan Taman Nasional Bromo Tengger Semeru.</p>
+  <p>Larangan: Tidak boleh membawa minuman alkohol, binatang, alat musik, speaker, handy talky, radio tape, senjata api, dan peledak.</p>
+</div>
+<div>
+  <h2 style="background-color: green; font-family: Geneva, sans-serif">Gunung Ijen</h2>
+  <p>Harga tiket: Rp. 25,000</p>
+  <p>Aturan: Wajib membawa surat sehat, wajib memiliki asuransi kecelakaan pribadi, membawa keselamatan kesehatan.</p>
+  <p>Larangan: Tidak boleh mengabaikan perkiraan cuaca, dilarang mendaki tanpa pemandu lokal.</p>
+</div>
+<div>
+  <h2 style="background-color: green; font-family: Geneva, sans-serif">Gunung Raung</h2>
+  <p>Harga tiket: Rp. 30,000</p>
+  <p>Aturan: Setiap pendaki wajib menggunakan jasa tour guide yang profesional, setiap pendaki wajib melampirkan surat sehat.</p>
+  <p>Larangan: Dilarang mendaki saat status gunung raung waspada atau level 2, dilarang berkemah di sekitar puncak, bibir, dan kaldera kawah.</p>
+</div>
+<div>
+  <h2 style="background-color: green; font-family: Geneva, sans-serif">Gunung Argopuro</h2>
+  <p>Harga tiket: Rp. 20,000</p>
+  <p>Aturan: Pendaki wajib mengikuti standart prosedur operasional, pendaki wajib memesan tiket secara online.</p>
+  <p>Larangan: Pendaki tidak diperbolehkan turun ke bremi, pendaki tidak diperbolehkan mengganggu habitat satwa dan flora di gunung.</p>
+</div>
+      <!-- Tambahkan entri aturan dan larangan untuk gunung lainnya -->
+    </div>
+
+    <!-- Section Contact Us dengan model ID card -->
+    <div id="contact" class="section">
+      <h2>Contact Us</h2>
+      <div class="id-card">
+        <img src="./lipa.jpg" alt="Contact Image">
+        <p><strong>Nama:</strong> Aliva Nuzulliani</p>
+        <p><strong>Alamat:</strong> Ds. Ngadirejo, Kec. Tanjunganom, Kab. Nganjuk</p>
+        <p><strong>No. HP:</strong> +62 857 3071 4939</p>
+      </div>
+      <div class="id-card">
+        <img src="./zhraa.jpg" alt="Contact Image">
+        <p><strong>Nama:</strong> Azzahra Meicha R.</p>
+        <p><strong>Alamat:</strong> Ds. Kendalrejo, Kec. Bagor, Kab. Nganjuk</p>
+        <p><strong>No. HP:</strong> +62 857 3303 8542</p>
+      </div>
+      <div class="id-card">
+        <img src="./deva.jpg" alt="Contact Image">
+        <p><strong>Nama:</strong> Deva Nuraini</p>
+        <p><strong>Alamat:</strong> Ds. Sukomoro, Kec. Sukomoro, Kab. Nganjuksss</p>
+        <p><strong>No. HP:</strong> +62 838 9014 0652</p>
+      </div>
+      <div class="id-card">
+        <img src="./belaaaa.jpg" alt="Contact Image">
+        <p><strong>Nama:</strong> Dhea Ayu S.</p>
+        <p><strong>Alamat:</strong> Ds. Sonobekel, Kec. Tanjunganom, Kab. Nganjuk</p>
+        <p><strong>No. HP:</strong> +62 815 4720 7811</p>
+      </div>
+    </div>
+
+    <!-- Section Login/Registrasi -->
+    <div id="login" class="section">
+      <h2>Login/Registrasi</h2>
+      <p>Masukkan akun Anda untuk akses lebih lanjut:</p>
+      <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <button type="submit">Login</button>
+      </form>
+      <p>Belum punya akun? <a href="#">Registrasi di sini</a></p>
+    </div>
+
+  </div>
+
+</body>
+</html>
